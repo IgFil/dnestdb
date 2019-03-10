@@ -1,0 +1,344 @@
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+.top-menu {
+    position: relative;
+    background: #0000CD;
+}
+
+.menu-main {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left-item {
+    float: left;
+}
+
+.right-item {
+    float: right;
+}
+
+.navbar-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-main a {
+    text-decoration: none;
+    display: block;
+    line-height: 80px;
+    padding: 0 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    color: white;
+    transition: .3s linear;
+}
+
+.menu-main a:hover {
+    background: rgba(0, 0, 0, .3);
+}
+
+@media (max-width: 830px) {
+    .menu-main {
+        padding-top: 90px;
+        text-align: center;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+    }
+
+    .menu-main li {
+        float: none;
+        display: inline-block;
+    }
+
+    .menu-main a {
+        line-height: normal;
+        padding: 20px 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 630px) {
+    .menu-main li {
+        display: block;
+    }
+}
+
+html {
+
+    background: url('/images/fon.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#cabinet_1 {
+
+    margin-left: 0px;
+    margin-top: 15px;
+    width: 160px;
+    height: 95px;
+    border: 3px solid blue;
+    padding: 1px;
+    background: blue;
+
+}
+
+#changepassword {
+    color: white;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+#info {
+    color: white;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: 20px;
+    border: 3px solid blue;
+    padding: 1px;
+    background: blue;
+
+}
+
+#create_humans {
+    margin-left: 490px;
+    margin-top: 15px;
+    width: 350px;
+    height: 300px;
+    border: 3px solid blue;
+    padding: 1px;
+    background: blue;
+    color: white;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#add-human {
+
+    margin-left: 15%;
+}
+
+#name_human {
+    margin-top: 5px;
+    width: 300px;
+    margin-left: 20px;
+}
+
+#years {
+
+    margin-left: 10px;
+
+}
+
+#worked {
+    margin-left: 10%;
+
+
+}
+
+#info-human {
+
+    margin-left: 10%;
+    width: 70%;
+
+}
+
+#info-human_1 {
+
+    margin-left: 10%;
+    text-align: center;
+}
+
+#phone {
+
+    margin-left: 10%;
+    margin-top: 0.1%;
+    width: 50%;
+}
+
+#errors {
+
+    color: red;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+#complete {
+    color: green;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+table {
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+
+    color: white;
+    text-align: left;
+
+    border-collapse: separate;
+
+    background: blue;
+
+}
+
+th {
+    background: #115154;
+
+
+}
+
+td {
+    background: #149692;
+
+
+}
+
+#addadmin_div {
+    color: white;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#id_1 {
+    margin-left: 41%;
+    color: white;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#form_addadm {
+    margin-left: 43%;
+    margin-top: 1%;
+    width: 12%;
+    height: 30%;
+    border: 3px solid blue;
+    padding: 0.1%;
+    background: blue;
+
+
+}
+
+#users_online {
+    width: 25%;
+    color: white;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border: 3px solid blue;
+    background: blue;
+    margin-top: 1%;
+
+
+}
+
+#table_online {
+    color: white;
+    margin-left: 25%;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+
+
+}
+
+#base_1 {
+    margin-left: 23%;
+}
+
+#zad_1 {
+    width: 25%;
+    margin-left: 37%;
+    height: 30%;
+    border: 3px solid blue;
+    padding: 1px;
+    background: blue;
+
+
+}
+
+#title {
+
+    width: 100%;
+
+
+}
+
+#body {
+    width: 100%;
+
+
+}
+
+#gotozadan {
+
+    margin-left: 30%;
+
+
+}
+
+#form_cab1 {
+    margin-left: 20%;
+
+
+}
+
+#formlabel_cab1 {
+    margin-left: 20%;
+    margin-top: 0%;
+
+
+}
