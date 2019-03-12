@@ -30,6 +30,7 @@ include 'php/users_online.php';
         </li>
         <li class="left-item"><a href="php/wiewallbase.php">Базы данных</a>
         </li>
+        <li class="left-item"><a href="php/support.php">Служба поддержки</a> </li>
        ';
 
             } else {

@@ -23,6 +23,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: aqua;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Arimo');
@@ -358,7 +359,8 @@ td {
 }
 
 .container {
-    display: inline-block;
+    position: absolute;
+    display: inline;
 
 
 }
@@ -387,4 +389,22 @@ td {
     font-weight: bold;
     font-size: 18px;
     padding: 1px;
+}
+
+#addquestion {
+    width: 40%;
+    margin-left: 25%;
+    height: 300px;
+    border: 3px solid blue;
+    padding: 2px;
+    background: blue;
+
+
+}
+
+textarea {
+    width: 80%;
+    height: 80%;
+
+
 }
