@@ -9,7 +9,7 @@ require '../db.php';
 
 </head>
 <body>
-<div id="table_online">
+<div class="container" id="table_online">
 
     Таблица пользователей онлайн:
     <table cellpadding="10">
@@ -36,8 +36,8 @@ require '../db.php';
     </table>
 
 </div>
-<div>Задания пользователей
-    <table>
+<div class="container" id="work-stat">Задания пользователей
+    <table cellpadding="10">
         <tr>
             <th>Тема задания</th>
             <th>Описания задания</th>

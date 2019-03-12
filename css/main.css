@@ -287,10 +287,12 @@ td {
 
 #table_online {
     color: white;
-    margin-left: 25%;
+
     font-family: 'Arimo', sans-serif;
     font-weight: bold;
     font-size: 18px;
+    width: 40%;
+    margin-left: 10%;
 
 
 }
@@ -338,7 +340,51 @@ td {
 
 #formlabel_cab1 {
     margin-left: 20%;
-    margin-top: 0%;
+    margin-top: 0%;;
+
+}
+
+#work-stat {
+    margin-left: auto;
+    padding: 0px;
+
+    color: white;
+
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 1px;
+
+}
+
+.container {
+    display: inline-block;
 
 
+}
+
+#zadan1 {
+    color: white;
+
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+
+    top: 15%;
+    margin-left: 50%;
+    padding: 1px;
+    position: absolute;
+}
+
+#zadan2 {
+    float: left;
+    margin-left: 5%;
+    position: absolute;
+    top: 15%;
+    color: white;
+
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 1px;
 }

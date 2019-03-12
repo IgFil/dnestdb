@@ -10,7 +10,7 @@ require 'db.php';
 </head>
 
 <body>
-<?php if (!isset($_SESSION['admin'])) {
+<?php if (!isset($_SESSION['login'])) {
     echo '<meta http-equiv="refresh" content="0;URL=/index.php">';
 
 } ?>
@@ -47,8 +47,9 @@ require 'db.php';
     <button type="submit" name="gochangepassword">Изменить пароль</button>
 </form>
 
-<label id="formlabel_cab1">Задания</label>
+<span id="zadan2">
 <table id="form_cab1">
+    <label id="formlabel_cab1">Задания</label>
     <tr>
         <th>Тема задания</th>
         <th>Описание задания</th>
@@ -71,6 +72,7 @@ require 'db.php';
     foreach ($work as $item) {
         if ($item['nameworker'] == $_SESSION['name']) {
             if ($item['status'] == 'Принято') {
+
             } else {
                 echo '<tr> <td>' . $item['title'] . '</td>
       <td>' . $item['body'] . '</td>
@@ -79,28 +81,23 @@ require 'db.php';
       <button value = true name = gotowork type=submit>Принять</button></form>
       <form action="cabinet.php" method="POST"><input type="hidden" name="refused_1" value="' . $item['id'] . '"> <button type= submit name="refused" value=refused>Отклонить</button></form></td>
       </tr>
-      </table>
-      ';
-
+      
+       ';
+            }
             }
         }
-
-
-        echo ' 
-  <lable>Ваши задания</lable>
-  <table>
+    echo '</table></span>
+ <span id="zadan1" >
+  <label>Ваши задания</label>
+  <table cellpadding="5">
   <tr>
   <th>Тема задания</th>
   <th>Описание задания</th>
   <th>Кому отправленно задание</th>
   <th>Статус</th>
   </tr>
-  <tr>
-  
-  
-  
-  
-  ';
+';
+
 
 
         if ($item['namecreator'] == $_SESSION['login']) {
@@ -114,7 +111,7 @@ require 'db.php';
     
     ';
         }
-    }
+
     if (isset($data['gotowork'])) {
         $status = 'Принято';
         $accept = R::findOne('work', 'id = ?', array($data['accept']));
@@ -131,7 +128,9 @@ require 'db.php';
 
     echo ' 
 
-</table>';
+  
+</table>
+</span>';
     ?>
 
 </body>
