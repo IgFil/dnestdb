@@ -212,7 +212,7 @@ html {
 }
 
 #complete {
-    color: green;
+    color: blue;
     font-family: 'Arimo', sans-serif;
     font-weight: bold;
     font-size: 18px;
@@ -229,7 +229,7 @@ table {
     text-align: left;
 
     border-collapse: separate;
-
+    margin-top: 1%;
     background: blue;
 
 }
@@ -293,7 +293,7 @@ td {
     font-weight: bold;
     font-size: 18px;
     width: 40%;
-    margin-left: 10%;
+    margin-left: 40%;
 
 
 }
@@ -361,6 +361,9 @@ td {
 .container {
     position: absolute;
     display: inline;
+    border: 3px solid blue;
+    padding: 1px;
+    background: blue;
 
 
 }

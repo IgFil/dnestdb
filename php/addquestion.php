@@ -11,7 +11,7 @@ require '../db.php';
 </head>
 <body>
 <header><h1>Создание запроса в службу поддержки</h1></header>
-<div id="addquestion" class="container">
+<div id="addquestion">
     <form action="addquestion.php" method="POST">
         <label>Тема вопроса</label>
         <br>
@@ -32,7 +32,7 @@ require '../db.php';
 </div>
 <?php
 $data = $_POST;
-$errors = [];
+$errors = array();
 if (isset($data['go_to_question'])) {
     if ($data['body'] == '') {
         $errors[] = "Введите суть вопроса/жалобы/предложения";
@@ -42,12 +42,16 @@ if (isset($data['go_to_question'])) {
     }
     if (empty($errors)) {
         $question = R::dispense('questions');
-        $question['status'] = "Жалоба ещё не принята";
-        $question['type'] = $data['title'];
-        $question['body'] = $data['body'];
-        $question['name_creator'] = $_SESSION['login'];
-        $question['time_create'] = date("H:i:s d/m/Y");
-        $question['ip'] = $_SERVER['REMOTE_ADDR'];
+        $question->status = 'Не принято';
+        $question->type = $data['title'];
+        $question->body = $data['body'];
+        $question->answer = 'Нет ответа';
+        $question->name_creator = $_SESSION['login'];
+        $question->time_create = date("H:i:s d/m/Y");
+        $question->ip = $_SERVER['REMOTE_ADDR'];
+        $question->name_accepter = 'none';
+        $question->time_answer = 'none';
+
         R::store($question);
         echo '<div id=complete> Вопрос успешно добавлен </div>';
     } else {
@@ -55,7 +59,9 @@ if (isset($data['go_to_question'])) {
 
     }
 }
+
 ?>
+
 <footer>
 </footer>
 </body>

@@ -21,7 +21,7 @@ include '../php/users_online.php';
     <nav class="top-menu">
         <ul class="menu-main">
             <li class="left-item"><a href="info_users.php">Статистика пользователей</a></li>
-
+            <li class="left-item"><a href="support_team.php">Служба поддрежки</a></li>
         </ul>
 
 
