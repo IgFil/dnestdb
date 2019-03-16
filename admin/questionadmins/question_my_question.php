@@ -32,11 +32,11 @@ require '../../db.php';
         settype($item['id'], integer);
         if ($item['type'] == 'question') {
 
-            if ($item['name_accepter'] = $_SESSION['login']) {
+
                 if ($item['answer'] == 'Нет ответа') {
+                    if ($item['name_accepter'] == $_SESSION['login']) {
 
-
-                    echo '
+                        echo '
              <tr>
              <td>' . $item['body'] . '</td>
              <td>' . $item['name_creator'] . '</td>
@@ -47,10 +47,10 @@ require '../../db.php';
                          
 
 ';
-
+                    }
 
                 }
-            }
+
 
         }
 

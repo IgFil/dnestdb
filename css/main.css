@@ -411,3 +411,18 @@ textarea {
 
 
 }
+
+#not_accept {
+    color: red;
+
+}
+
+#accept {
+    color: green;
+
+}
+
+#worked_question {
+    color: chartreuse;
+
+}

@@ -25,9 +25,10 @@ if (isset($_POST['go_to_work'])) {
 
     $up->answer = $_POST['answer'];
     $up->time_answer = date("H:i:s d/m/Y");
+    $up->status = "Отвечено";
 
     R::store($up);
-    echo '<div id=complete> Вопрос успешно добавлен <a href="/admin/adminpanel.php">Админ Панель</a> </div>';
+    echo '<div id=complete>Ответ успешно добавлен <a href="/admin/adminpanel.php">Админ Панель</a> </div>';
 }
 ?>
 </body>

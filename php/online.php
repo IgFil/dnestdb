@@ -12,13 +12,14 @@ function online($data = 0)
 
     }
 
-    if ($data != 0) {
+
 
 
         if ($online) {
             $online->lastvisit = time();
             R::store($online);
-        } else {
+        }
+    if ($data != 0) {
             $online = R::dispense('online');
             $online->login = $data['login'];
             $online->rang = $rang;
@@ -30,5 +31,4 @@ function online($data = 0)
         }
 
 
-    }
 }

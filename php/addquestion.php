@@ -53,7 +53,7 @@ if (isset($data['go_to_question'])) {
         $question->time_answer = 'none';
 
         R::store($question);
-        echo '<div id=complete> Вопрос успешно добавлен </div>';
+        echo '<div id=complete> Вопрос успешно добавлен <a href="/">Главная</a> </div>';
     } else {
         echo '<div id = errors >' . array_shift($errors) . '</div>';
 
