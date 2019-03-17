@@ -14,6 +14,7 @@ include 'php/users_online.php';
 </head>
 
 <body>
+<h1>test</h1>
 <header>
     <h1> Днестровск База Данных </h1>
 
