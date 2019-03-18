@@ -22,7 +22,7 @@ include 'php/users_online.php';
     myVid = document.getElementById("audio");
     myVid.volume = 0.1;
 </script>
-<h1>test</h1>
+
 <header>
     <h1> Днестровск База Данных </h1>
 
