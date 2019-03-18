@@ -87,7 +87,8 @@ if (isset($data['submit'])) {
             margin-left: 44%;
             width: 11%;
 
-            border: 5px solid blue;
+            border: 1px solid black;
+            border-radius: 5px;
             padding: 0.1%;
             color: white;
             font-family: 'Arimo', sans-serif;
@@ -95,7 +96,7 @@ if (isset($data['submit'])) {
             font-size: 18px;
 
 
-            background: blue;
+            background: limegreen;
 
 
         }
@@ -107,7 +108,7 @@ if (isset($data['submit'])) {
 
         h1 {
             text-align: center;
-            color: blue;
+            color: limegreen;
 
 
         }
