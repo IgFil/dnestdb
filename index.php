@@ -62,11 +62,11 @@ include 'php/users_online.php';
 if (isset($_SESSION['id'])) {
 
     echo "<div id=users_online>
- <div id = online_users>Пользователи онлайн:" . $output['user'] . "</div>
-<div id = online_moders>" . $output['moders'] . "</div>
-<div id = online_admins>Администраторы онлайн:" . $output['admins'] . "</div>
-<div id = online_superadmins>Страшая Администрация оналйн:" . $output['superadmins'] . "</div>
-<div id = online_creators>Создатели оналйн:" . $output['creators'] . "</div>";
+ <div id = online_users>Пользователи онлайн: " . $output['user'] . "</div>
+<div id = online_moders> Модераторы онлайн: " . $output['moders'] . "</div>
+<div id = online_admins>Администраторы онлайн: " . $output['admins'] . "</div>
+<div id = online_superadmins>Страшая Администрация оналйн: " . $output['superadmins'] . "</div>
+<div id = online_creators>Создатели оналйн: " . $output['creators'] . "</div>";
 
 }
 R::exec('DELETE FROM `online` WHERE `lastvisit` < ' . (time() - (3600)));

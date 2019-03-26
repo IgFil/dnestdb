@@ -20,6 +20,7 @@ function online($data = 0)
             R::store($online);
         }
     if ($data != 0) {
+        if (!isset($online)) {
             $online = R::dispense('online');
             $online->login = $data['login'];
             $online->rang = $rang;
@@ -30,5 +31,5 @@ function online($data = 0)
 
         }
 
-
+    }
 }

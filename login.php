@@ -28,7 +28,7 @@ if (isset($data['gologin'])) {
             online($data);
 
 
-            echo '<div id = true_reg>Вы успешно авторизовались<a href = />Главная страница</a> </div>';
+            echo '<div id = true_reg>Вы успешно авторизовались<a href = /> Главная страница</a> </div>';
 
 
         } else {

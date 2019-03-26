@@ -5,15 +5,15 @@ require '../../db.php';
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <title>Ответ на вопрос</title>
+    <title>Жалоба</title>
 </head>
 <body>
 <?php $question_base = R::load('questions', $_POST['go_to_answer']); ?>
-<div id="work_question" class="container">
-    <label>Вопрос от <? echo $question_base['name_creator']; ?></label>
+<div id="work_report" class="container">
+    <label>Жалоба от <? echo $question_base['name_creator']; ?></label>
     <br>
-    <label>Вопрос:<? echo $question_base['body']; ?></label>
-    <form action="question_work.php" method="POST">
+    <label>Жалоба:<? echo $question_base['body']; ?></label>
+    <form action="reports_work.php" method="POST">
         <textarea name="answer" placeholder="Ответ на вопрос"></textarea>
         <button type="submit" value="<? echo $question_base['id']; ?>" name="go_to_work">Ответить</button>
     </form>
