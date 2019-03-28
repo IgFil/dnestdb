@@ -369,11 +369,13 @@ td {
 }
 
 .container {
+    margin-left: 35%;
     position: absolute;
     display: inline;
     border: 1px solid black;
     padding: 1px;
     background: limegreen;
+    border-radius: 5px;
 
 
 }
