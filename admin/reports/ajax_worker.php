@@ -11,6 +11,7 @@ if ($_POST['accept'] != 0) {
     $up['status'] = "Принято";
     $up['name_accepter'] = $_SESSION['login'];
     R::store($up);
+    echo 'Жалоба успешно принята';
 
 
 }
