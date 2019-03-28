@@ -24,7 +24,7 @@ require '../db.php';
         </select>
         <textarea name="body" placeholder="Суть вопроса/жалобы/предложения"></textarea>
         <br>
-        <input type="checkbox" name="prav_true" value="pravtrue">Нажимая на галочку вы соглашаетесь<a
+        <input type="checkbox" name="prav_true" value="pravtrue">Нажимая на галочку вы соглашаетесь <a
                 href="prav_question.html">с правилами подачи вопросов </a>
         <button name="go_to_question" type="submit">Отправить вопрос</button>
 

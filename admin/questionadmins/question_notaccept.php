@@ -8,6 +8,37 @@ require '../../db.php';
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
+<h1>Не принятые жалобы</h1>
+<script type="text/javascript">
+    window.onload = function () {
+        var btn_set = document.querySelector('button[name=go_to_question]');
+        document.querySelector('#go_to_question').onclick = function () {
+            var params = 'go_to_question=' + btn_set.value;
+
+            ajaxPOST(params);
+        }
+    }
+
+    function ajaxPOST(params) {
+        var request = new XMLHttpRequest();
+
+
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) {
+
+                document.querySelector('#result').innerHTML = request.responseText;
+
+            }
+
+        }
+
+        request.open('POST', 'ajax_worker.php');
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        request.send(params);
+    }
+
+
+</script>
 <header>
     <h1>Не принятые вопросы</h1>
     <nav class="top-menu">
@@ -34,7 +65,7 @@ require '../../db.php';
         <tr>
             <td>' . $item['body'] . '</td>
             <td>' . $item['time_create'] . '</td>
-            <td><form action="question_notaccept.php" method="POST"><button name="go_to_question" type="submit" value="' . $item['id'] . '">Принять</button></form></td>
+            <td><form><button name="go_to_question" id="go_to_question" type="button" value="' . $item['id'] . '">Принять</button></form></td>
          </tr>
                 
 ';
@@ -45,20 +76,13 @@ require '../../db.php';
 
 
     }
-    $data = $_POST;
-    if (isset($data['go_to_question'])) {
 
-        $up = R::load('questions', $data['go_to_question']);
-        $up['status'] = 'Принято';
-        $up['name_accepter'] = $_SESSION['login'];
-        R::store($up);
-    }
 
 
     ?>
 </table>
 
-
+<div id="result"></div>
 </body>
 
 </html>

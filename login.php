@@ -28,7 +28,7 @@ if (isset($data['gologin'])) {
             online($data);
 
 
-            echo '<div id = true_reg>Вы успешно авторизовались<a href = />Главная страница</a> </div>';
+            echo '<div id = true_reg>Вы успешно авторизовались<a href = /> Главная страница</a> </div>';
 
 
         } else {
@@ -72,16 +72,17 @@ if (!empty($errors)) {
 
             margin-left: 44%;
             width: 11%;
-            border: 3px solid blue;
+            border: 1px solid black;
             padding: 0.1%;
-            background: blue;
+            background: limegreen;
+            border-radius: 5px;
 
 
         }
 
         h1 {
             text-align: center;
-            color: blue;
+            color: limegreen;
 
 
         }
