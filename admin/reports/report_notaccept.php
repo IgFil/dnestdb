@@ -46,7 +46,7 @@ require '../../db.php';
 
 <div id="result"></div>
 <div id="work_delete" class="modal">
-    <div class="work_content">
+    <div class="window_content">
         <span class="close">&times;</span>
         <p>Причина отклонения</p>
         <form>
@@ -70,7 +70,7 @@ require '../../db.php';
     window.onload = function () {
         var text_set = document.querySelector('textarea[name=not_accepted_body]');
         var btn_set = document.querySelector('#delete');
-        var btn_accept = document.querySelector('#accept')
+        var btn_accept = document.querySelector('#accept');
 
         document.querySelector('#go_to_delete').onclick = function () {
             var params = 'not_accepted_body=' + text_set.value + '&' + 'go_to_delete=' + btn_set.value;
